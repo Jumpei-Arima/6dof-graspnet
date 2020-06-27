@@ -15,7 +15,7 @@ import trimesh.transformations as tra
 import os
 
 GRIPPER_PC = np.load(
-    'gripper_models/panda_pc.npy', allow_pickle=True).item()['points']
+    os.path.dirname(__file__)+'/gripper_models/panda_pc.npy', allow_pickle=True).item()['points']
 GRIPPER_PC[:, 3] = 1.
 
 
