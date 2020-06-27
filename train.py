@@ -36,8 +36,11 @@ try:
     from visualization_utils import draw_scene
     HEADLESS = False
 except:
-    import horovod.tensorflow as hvd
     HEADLESS = True
+    try:
+        import horovod.tensorflow as hvd
+    except:
+        pass
 
 import models.model
 from tf_utils import get_shape
